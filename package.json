@@ -1,0 +1,41 @@
+{
+  "name": "@dbrkit/js-utils",
+  "description": "",
+  "version": "0.0.1-beta3",
+  "main": "./dist/index.cjs.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "url": "https://github.com/dbrkit/js-utils"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "prepublish": "pnpm run build",
+    "prebuild": "pnpm run clean",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "eslint --fix 'src/**/*.{jsx,ts,tsx}'",
+    "format": "prettier --write src//**/*.{ts,tsx,css} --config ./.prettierrc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "path-value": "^0.9.5",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.8",
+    "@types/react": "^18.2.19",
+    "@vitejs/plugin-react": "^3.0.1",
+    "typescript": "^5.1.6",
+    "vite": "^4.0.4",
+    "vite-plugin-dts": "^1.7.1",
+    "vite-plugin-linter": "^2.0.2",
+    "vite-tsconfig-paths": "^4.0.3"
+  }
+}
